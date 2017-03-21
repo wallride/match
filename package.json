@@ -1,0 +1,47 @@
+{
+  "name": "wallride-match",
+  "version": "1.0.0",
+  "description": "Matching and filtering JS objects (with TypeScript typings)",
+  "main": "./build/index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "pretest": "rm -rf ./tests/build && cd ./tests && gulp && cd .. | bunyan --color -o short",
+    "test": "mocha ./tests/build/index",
+    "build": "rm -rf ./build && gulp",
+    "prepublish": "npm run build && npm test"
+  },
+  "typings": "./build/module.d.ts",
+  "typescript": {
+    "definition": "./build/module.d.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wallride/match.git"
+  },
+  "keywords": [
+    "javascript",
+    "typescript",
+    "objects",
+    "matching",
+    "filter",
+    "equal"
+  ],
+  "author": "Ivan Pesochenko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wallride/match/issues"
+  },
+  "homepage": "https://github.com/wallride/match#readme",
+  "devDependencies": {
+    "@types/chai": "^3.4.35",
+    "@types/mocha": "^2.2.40",
+    "chai": "^3.5.0",
+    "dts-bundle": "^0.7.2",
+    "gulp": "^3.9.1",
+    "gulp-typescript": "^3.1.6",
+    "mocha": "^3.2.0",
+    "typescript": "^2.2.1"
+  }
+}

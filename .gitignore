@@ -1,0 +1,8 @@
+node_modules
+/.idea
+/build
+/tests/build
+*.log
+
+tests/resources/dbase/testFile.dbf
+tests/resources/dbase/write*.txt

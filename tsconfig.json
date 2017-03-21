@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "strictNullChecks": true,
+    "noImplicitAny": false,
+    "preserveConstEnums": true,
+    "target":"ES6",
+    "moduleResolution": "node",
+    "module": "commonjs",
+    "project":"*.ts",
+    "noEmitHelpers": false,
+    "removeComments": false,
+    "declaration": true,
+    "rootDir": "./src",
+    "importHelpers": true,
+    "outDir": "./build"
+  },
+  "exclude": ["node_modules", "tests", "build"]
+}
