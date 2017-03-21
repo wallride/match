@@ -97,6 +97,6 @@ match.check(object, {
 
 ---
 
-Want more examples? Take a look into (tests/src/index.ts)
+Want more examples? Take a look into [tests sources](https://github.com/wallride/match/blob/master/tests/src/index.ts)
 
 
