@@ -48,3 +48,14 @@ describe('Criterion cases', ()=>{
         })).to.eq(true, 'case 1');
     });
 });
+
+describe('Filtering cases', ()=>{
+    it('Simple', ()=>{
+        let objects = [
+            {},
+            {id:1},
+            {id:2}
+        ];
+        expect(match.filter(objects, {id:1}).length).to.eq(1, 'case 1');
+    });
+});

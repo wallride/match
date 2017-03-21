@@ -30,7 +30,7 @@ match.check(object, {name:'Foo', id:1});
 // returns true - Perfect match!
 
 match.check(object, {id:1});
-// returns true - Only id is matching
+// returns true - ID is matching, that's enough
 
 match.check(object, {name:'Foo'});
 // returns true - Yes, this name fits too
@@ -92,8 +92,37 @@ match.check(object, {
     } )
 });
 // returns true - Yes. Both first and last names are present. No matter what they are
-
 ```
+
+If you want to make your own criterion you may extend the `AbstractCriterion` class
+```typescript
+class MyAwesomeCriterion extends match.AbstractCriterion {
+    check(data: any): boolean {
+        return true; // whatever
+    }
+}
+
+match.check(someObject, {
+    name: new MyAwesomeCriterion()
+});
+```
+
+
+
+## Filtering objects
+
+Also you may select matching objects from array like this:
+
+```typescript
+let objects = [
+    {},
+    {id:1},
+    {id:2}
+];
+match.filter(objects, {id:1})
+// returns [{id:1}]
+```
+
 
 ---
 

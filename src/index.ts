@@ -3,6 +3,8 @@ import {ICriterion} from "./criterias/ICriterion";
 import {AbstractCriterion} from "./criterias/AbstractCriterion";
 import {CustomCriterion} from "./criterias/CustomCriterion";
 
+export {AbstractCriterion}
+
 export const criteria = {
     custom: (callback: {(value:any):boolean}): CustomCriterion => { return new CustomCriterion(callback); }
 };
@@ -21,6 +23,20 @@ export function check(target:Object, filter:IFilter): boolean {
     }
 
     return true;
+}
+
+/**
+ * Selects matching objects from specified array and returns them
+ * @param targets array of objects to be filtered
+ * @param filter Object to be used as a pattern.
+ * @returns {O[]}
+ */
+export function filter<O extends Object>(targets:O[], filter:IFilter): O[] {
+    let result: O[] = [];
+
+    for (let object of targets) if (check(object, filter)) result.push(object);
+
+    return result;
 }
 
 
