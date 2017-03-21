@@ -10,7 +10,7 @@ TypeScript module definitions are already provided inside this package.
 
 [![Build Status](http://img.shields.io/travis/wallride/match.svg?style=flat)](http://travis-ci.org/wallride/match)
 [![Dependencies](http://img.shields.io/david/wallride/match.svg?style=flat)](https://david-dm.org/wallride/match)
-[![Dev dependencies](http://img.shields.io/david/dev/wallride/match.svg?style=flat)](https://david-dm.org/wallride/match
+[![Dev dependencies](http://img.shields.io/david/dev/wallride/match.svg?style=flat)](https://david-dm.org/wallride/match)
 
 
 ## Basic usage
@@ -94,5 +94,9 @@ match.check(object, {
 // returns true - Yes. Both first and last names are present. No matter what they are
 
 ```
+
+---
+
+Want more examples? Take a look into [./tests/src/index.ts]
 
 
